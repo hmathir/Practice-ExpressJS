@@ -9,19 +9,19 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-    res.sent({
+    res.send({
         message: 'Post Methood Called.'
     })
 })
 
 app.put('/', (req, res) => {
-    res.sent({
+    res.send({
         message: 'Put Methood Called.'
     })
 })
 
 app.delete('/', (req, res) => {
-    res.sent({
+    res.send({
         message: 'Delete Methood Called.'
     })
 })

@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const basicRouter = require('./routes/routes');
 
 app.get('/', (req, res) => {
     res.send({
@@ -8,24 +9,7 @@ app.get('/', (req, res) => {
     })
 })
 
-app.post('/', (req, res) => {
-    res.send({
-        message: 'Post Methood Called.'
-    })
-})
-
-app.put('/', (req, res) => {
-    res.send({
-        message: 'Put Methood Called.'
-    })
-})
-
-app.delete('/', (req, res) => {
-    res.send({
-        message: 'Delete Methood Called.'
-    })
-})
-
+app.use("/api",basicRouter)
 
 //This is for the invalid route!
 app.use((req,res) => {
